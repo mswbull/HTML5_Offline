@@ -1,0 +1,74 @@
+#slideshow{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1024px;
+  height: 768px;
+  text-align: center;
+  background: white;
+}
+
+#slideshow .sliding-view-element {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1024px;
+  height: 768px;
+  opacity: 0 !important;
+  -webkit-transition: opacity 500ms;
+}
+
+#slideshow .sliding-view-element img {
+  min-height: 768px;
+  margin: auto;
+}
+
+#slideshow .sliding-view-element-focused {
+  opacity: 1 !important;
+}
+
+/* Buttons */
+
+#slideshow .home {
+	position: absolute;
+	float: left;
+	left: 36px;
+	top: 655px;
+	z-index: 6;
+}
+
+#slideshow .left-arrow {
+	position: absolute;
+	float: left;
+	left: 125px;
+	top: 655px;
+	z-index: 6;
+}
+
+#slideshow .right-arrow {
+	position: absolute;
+	float: right;
+	right: 125px;
+	top: 655px;
+	z-index: 6;
+}
+
+#slideshow .exit-fullscreen {
+	position: absolute;
+	float: right;
+	right: 36px;
+	top: 655px;
+	z-index: 6;
+}
+
+#slideshow .home,
+#slideshow .enter-fullscreen,
+#slideshow .left-arrow,
+#slideshow .right-arrow {
+  -webkit-transition: opacity 500ms;
+}
+
+#slideshow .hoverable { -webkit-transition:opacity .5s; z-index:9999; }
+.activity-hidden .hoverable { opacity: 0; }
+/* AppleTV shouldn't hide things */
+@media (-webkit-apple-tv) { .activity-hidden .hoverable { opacity: 1; } }

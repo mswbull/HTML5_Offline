@@ -1,0 +1,182 @@
+#photos {
+  background-image: url("../images/photos/background.jpg");
+}
+
+/* Sliding View */
+
+#photos .sliding-view {
+  position: absolute;
+  left: 0px;
+  top: 72px;
+  width: 1024px;
+  height: 480px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#photos .sliding-view-element {
+  position: absolute;
+  top: 0px;
+  left: 46px;
+  width: 640px;
+  height: 480px;
+  -webkit-transition: -webkit-transform 500ms, opacity 250ms;
+  cursor: pointer;
+  z-index: 0;
+}
+
+#photos .sliding-view-element img {
+  -webkit-transition: -webkit-transform 500ms, opacity 250ms;
+  width: 640px;
+  height: 480px;
+  /* Change the scale to .8 if just image carousel */
+  -webkit-transform: scale(1);
+  opacity: 0.5;
+}
+
+#photos .sliding-view-element-focused img {
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+#photos .sliding-view-element-hidden {
+  display: none;
+}
+
+/* Story */
+
+#photos .imageCaptionContent {
+  position: absolute;
+  top: 0px;
+  left: 650px;
+  width: 258px;
+  height: 460px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+#photos .imageCaptionContent {
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 1em;
+  padding-right: .75em;
+  padding-left: .75em;
+  font-family: 'Helvetica', sans-serif;
+  color: white;
+  letter-spacing: 0px;
+  margin-top: 0.0em;
+  margin-bottom: 0.25em;
+}
+
+/* Page Control */
+
+.slider {
+  position: absolute;
+  left: 254px;
+  top: 669px;
+  width: 524px;
+  height: 48px;
+  z-index: 0;
+}
+
+#photos .page-control {
+  position: absolute;
+  left: 272px;
+  top: 669px;
+  width: 488px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#photos .page-control-indicator-element {
+  background: url('../images/interface/sliderPill.png') no-repeat center center;
+  position: absolute;
+  top: 12px;
+  left: -3px;
+  width: 44px;
+  height: 24px;
+}
+
+/* Buttons */
+.menu-leftside
+{
+	position: absolute;
+	/*  BOTTOM RIGHT top: 655px; right: 12px; */
+	/*  BOTTOM CENTER top: 655px; right = 512 + (width/2) */
+	top: 643px;
+	float: left;
+	left: 24px; 
+	width: 166px; /* 1-Button = 104, 2-Button = 166, 3-Button = 255, 4-Button = 344 */
+	height: 77px;
+	background-color: #111;
+	opacity: 1.0;
+	padding: 12px;
+	-webkit-border-radius: 12px;
+	z-index: 5;
+}
+
+#photos .home {
+	position: relative;
+	float: left;
+	margin: 0;
+	z-index: 6;
+}
+
+#photos .left-arrow
+{
+	position: relative;
+	float: left;
+	margin: 0 0 0 12px;
+	z-index: 6;
+}
+
+.menu-rightside
+{
+	position: absolute;
+	/*  BOTTOM RIGHT top: 655px; right: 12px; */
+	/*  BOTTOM CENTER top: 655px; right = 512 + (width/2) */
+	top: 643px;
+	float: right;
+	right: 24px; 
+	width: 166px; /* 1-Button = 104, 2-Button = 166, 3-Button = 255, 4-Button = 344 */
+	height: 77px;
+	background-color: #111;
+	opacity: 1.0;
+	padding: 12px;
+	-webkit-border-radius: 12px;
+	z-index: 5;
+}
+
+#photos .right-arrow {
+	position: relative;
+	float: right;
+	margin: 0 12px 0 0;
+	z-index: 6;
+}
+
+#photos .enter-fullscreen {
+	position: relative;
+	float: right;
+	margin: 0;
+	z-index: 6;
+}
+
+#photos .enter-fullscreen,
+#photos .left-arrow,
+#photos .right-arrow {
+  -webkit-transition: opacity 500ms;
+}
+
+#photos .inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* dim the arrows when they're inactive on Apple TV */
+@media (-webkit-apple-tv) {
+  #photos .inactive {
+    opacity: 1;
+  }
+}

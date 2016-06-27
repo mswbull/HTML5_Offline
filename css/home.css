@@ -1,0 +1,107 @@
+#home {
+  background-image: url("../images/home/background.jpg");
+}
+
+/* Cover Menu Buttons */
+
+.menu
+{
+	position: absolute;
+	/*  BOTTOM RIGHT top: 655px; right: 12px; */
+	/*  BOTTOM CENTER top: 655px; right = 512 + (width/2) */
+	top: 643px;
+	float: right;
+	right: 24px; 
+	width: 166px; /* 1-Button = 77, 2-Button = 166, 3-Button = 255, 4-Button = 344 */
+	height: 77px;
+	background-color: #111;
+	opacity: 1.0;
+	padding: 12px;
+	-webkit-border-radius: 12px;
+	z-index: 5;
+}
+
+.menu > .photos
+{
+	position: relative;
+	float: right;
+	margin: 0;
+	z-index: 6;
+}
+
+.menu > .movieButton
+{
+	position: relative;
+	float: right;
+	margin: 0 12px 0 0;
+	z-index: 6;
+}
+
+.menu > .infoButton
+{
+	position: relative;
+	float: right;
+	margin: 0 12px 0 0;
+	z-index: 6;
+}
+
+.menu > .audioSwitch
+{
+	position: relative;
+	float: right;
+	margin: 0 12px 0 0;
+	z-index: 6;
+}
+
+/* Title Text */
+
+.headline
+{
+	text-align: center;
+	color: white;
+	font-size: 64px;
+	font-family: 'Times New Roman', serif;
+	margin-top: 64px;
+	text-indent: 0px;
+	vertical-align: top;
+	line-height: 100%;
+	text-transform: none;
+	text-decoration: none;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	white-space: normal;
+}
+
+.subhead
+{
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	font-family: 'Helvetica', sans-serif;
+	margin-top: 12px;
+	text-indent: 0px;
+	vertical-align: top;
+	line-height: 100%;
+	text-transform: none;
+	text-decoration: none;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	white-space: normal;
+}
+
+.byline-string
+{
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	font-family: 'Helvetica', sans-serif;
+	margin-top: 12px;
+	text-indent: 0px;
+	vertical-align: top;
+	line-height: 100%;
+	text-transform: none;
+	text-decoration: none;
+	word-spacing: 0px;
+	letter-spacing: 0px;
+	white-space: normal;
+}
